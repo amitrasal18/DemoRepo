@@ -26,6 +26,7 @@ public class amazonALLYTest {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.get("http://www.amazon.com");
+		System.out.println("no errors");
 	}
 	
 	@Test
