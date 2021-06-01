@@ -1,0 +1,478 @@
+[
+	{
+		"help": "ARIA attributes must conform to valid names",
+		"nodes": [
+			{
+				"all": [
+				],
+				"failureSummary": "Fix any of the following:\n  Invalid ARIA attribute name: aria-lable",
+				"impact": "critical",
+				"html": "<div class=\"navFooterLine navFooterLinkLine navFooterDescLine\" role=\"navigation\" aria-lable=\"More on Amazon.com\">",
+				"none": [
+				],
+				"any": [
+					{
+						"data": [
+							"aria-lable"
+						],
+						"impact": "critical",
+						"relatedNodes": [
+						],
+						"id": "aria-valid-attr",
+						"message": "Invalid ARIA attribute name: aria-lable"
+					}
+				],
+				"target": [
+					".navFooterDescLine"
+				]
+			}
+		],
+		"impact": "critical",
+		"description": "Ensures attributes that begin with aria- are valid ARIA attributes",
+		"helpUrl": "https://dequeuniversity.com/rules/axe/4.2/aria-valid-attr?application=axeAPI",
+		"id": "aria-valid-attr",
+		"tags": [
+			"cat.aria",
+			"wcag2a",
+			"wcag412"
+		]
+	},
+	{
+		"help": "Alternative text of images should not be repeated as text",
+		"nodes": [
+			{
+				"all": [
+				],
+				"failureSummary": "Fix all of the following:\n  Element contains <img> element with alt text that duplicates existing text",
+				"impact": "minor",
+				"html": "<img alt=\"Sweatshirts\" src=\"https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_WomenFashion_Sweatshirt_Quad_Cat_1x._SY116_CB418609101_.jpg\" class=\"landscape-image\" data-a-hires=\"https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_WomenFashion_Sweatshirt_Quad_Cat_2x._SY232_CB418609084_.jpg\">",
+				"none": [
+					{
+						"impact": "minor",
+						"relatedNodes": [
+						],
+						"id": "duplicate-img-label",
+						"message": "Element contains <img> element with alt text that duplicates existing text"
+					}
+				],
+				"any": [
+				],
+				"target": [
+					"img[alt=\"Sweatshirts\"]"
+				]
+			},
+			{
+				"all": [
+				],
+				"failureSummary": "Fix all of the following:\n  Element contains <img> element with alt text that duplicates existing text",
+				"impact": "minor",
+				"html": "<img alt=\"Joggers\" src=\"https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_WomenFashion_Joggers_Quad_Cat_1x._SY116_CB418608748_.jpg\" class=\"landscape-image\" data-a-hires=\"https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_WomenFashion_Joggers_Quad_Cat_2x._SY232_CB418608748_.jpg\">",
+				"none": [
+					{
+						"impact": "minor",
+						"relatedNodes": [
+						],
+						"id": "duplicate-img-label",
+						"message": "Element contains <img> element with alt text that duplicates existing text"
+					}
+				],
+				"any": [
+				],
+				"target": [
+					"img[alt=\"Joggers\"]"
+				]
+			},
+			{
+				"all": [
+				],
+				"failureSummary": "Fix all of the following:\n  Element contains <img> element with alt text that duplicates existing text",
+				"impact": "minor",
+				"html": "<img alt=\"Cardigans\" src=\"https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_WomenFashion_Cardigans_Quad_Cat_1x._SY116_CB418608722_.jpg\" class=\"landscape-image\" data-a-hires=\"https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_WomenFashion_Cardigans_Quad_Cat_2x._SY232_CB418608722_.jpg\">",
+				"none": [
+					{
+						"impact": "minor",
+						"relatedNodes": [
+						],
+						"id": "duplicate-img-label",
+						"message": "Element contains <img> element with alt text that duplicates existing text"
+					}
+				],
+				"any": [
+				],
+				"target": [
+					"img[alt=\"Cardigans\"]"
+				]
+			},
+			{
+				"all": [
+				],
+				"failureSummary": "Fix all of the following:\n  Element contains <img> element with alt text that duplicates existing text",
+				"impact": "minor",
+				"html": "<img alt=\"Easy tees\" src=\"https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_WomenFashion_Tees_Quad_Cat_1x._SY116_CB418608878_.jpg\" class=\"landscape-image\" data-a-hires=\"https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_WomenFashion_Tees_Quad_Cat_2x._SY232_CB418608878_.jpg\">",
+				"none": [
+					{
+						"impact": "minor",
+						"relatedNodes": [
+						],
+						"id": "duplicate-img-label",
+						"message": "Element contains <img> element with alt text that duplicates existing text"
+					}
+				],
+				"any": [
+				],
+				"target": [
+					"img[alt=\"Easy\\ tees\"]"
+				]
+			}
+		],
+		"impact": "minor",
+		"description": "Ensure image alternative is not repeated as text",
+		"helpUrl": "https://dequeuniversity.com/rules/axe/4.2/image-redundant-alt?application=axeAPI",
+		"id": "image-redundant-alt",
+		"tags": [
+			"cat.text-alternatives",
+			"best-practice"
+		]
+	},
+	{
+		"help": "Form elements should have a visible label",
+		"nodes": [
+			{
+				"all": [
+				],
+				"failureSummary": "Fix all of the following:\n  Only title used to generate label for form element",
+				"impact": "serious",
+				"html": "<select aria-describedby=\"searchDropdownDescription\" class=\"nav-search-dropdown searchSelect nav-progressive-attrubute nav-progressive-search-dropdown\" data-nav-digest=\"Xa0GQ+pPQ/tdsV+GmRWeXB8PUD0=\" data-nav-selected=\"0\" id=\"searchDropdownBox\" name=\"url\" style=\"display: block;\" tabindex=\"0\" title=\"Search in\">",
+				"none": [
+					{
+						"impact": "serious",
+						"relatedNodes": [
+						],
+						"id": "title-only",
+						"message": "Only title used to generate label for form element"
+					}
+				],
+				"any": [
+				],
+				"target": [
+					"#searchDropdownBox"
+				]
+			}
+		],
+		"impact": "serious",
+		"description": "Ensures that every form element is not solely labeled using the title or aria-describedby attributes",
+		"helpUrl": "https://dequeuniversity.com/rules/axe/4.2/label-title-only?application=axeAPI",
+		"id": "label-title-only",
+		"tags": [
+			"cat.forms",
+			"best-practice"
+		]
+	},
+	{
+		"help": "Ensures landmarks are unique",
+		"nodes": [
+			{
+				"all": [
+				],
+				"failureSummary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable",
+				"impact": "moderate",
+				"html": "<div id=\"navbar\" cel_widget_id=\"Navigation-desktop-navbar\" data-template=\"layoutSwapToolBar\" role=\"navigation\" class=\"nav-sprite-v1 celwidget nav-bluebeacon nav-a11y-t1 bold-focus-hover layout2 nav-flex layout3 layout3-alt nav-packard-glow hamburger nav-progressive-attribute\" data-csa-c-id=\"4uzs34-y68yd5-5vxwcg-xch0dp\" data-cel-widget=\"Navigation-desktop-navbar\">",
+				"none": [
+				],
+				"any": [
+					{
+						"data": {
+							"role": "navigation"
+						},
+						"impact": "moderate",
+						"relatedNodes": [
+							{
+								"html": "<div class=\"navFooterLine navFooterLinkLine navFooterDescLine\" role=\"navigation\" aria-lable=\"More on Amazon.com\">",
+								"target": [
+									".navFooterDescLine"
+								]
+							}
+						],
+						"id": "landmark-is-unique",
+						"message": "The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+					}
+				],
+				"target": [
+					"#navbar"
+				]
+			}
+		],
+		"impact": "moderate",
+		"description": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+		"helpUrl": "https://dequeuniversity.com/rules/axe/4.2/landmark-unique?application=axeAPI",
+		"id": "landmark-unique",
+		"tags": [
+			"cat.semantics",
+			"best-practice"
+		]
+	},
+	{
+		"help": "Links must have discernible text",
+		"nodes": [
+			{
+				"all": [
+				],
+				"failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute",
+				"impact": "serious",
+				"html": "<a href=\"/?ref_=footer_logo\">\n        <div class=\"nav-logo-base nav-sprite\"><\/div>\n        <\/a>",
+				"none": [
+					{
+						"impact": "serious",
+						"relatedNodes": [
+						],
+						"id": "focusable-no-name",
+						"message": "Element is in tab order and does not have accessible text"
+					}
+				],
+				"any": [
+					{
+						"impact": "minor",
+						"relatedNodes": [
+						],
+						"id": "has-visible-text",
+						"message": "Element does not have text that is visible to screen readers"
+					},
+					{
+						"impact": "serious",
+						"relatedNodes": [
+						],
+						"id": "aria-label",
+						"message": "aria-label attribute does not exist or is empty"
+					},
+					{
+						"impact": "serious",
+						"relatedNodes": [
+						],
+						"id": "aria-labelledby",
+						"message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+					},
+					{
+						"data": {
+							"messageKey": "noAttr"
+						},
+						"impact": "serious",
+						"relatedNodes": [
+						],
+						"id": "non-empty-title",
+						"message": "Element has no title attribute"
+					}
+				],
+				"target": [
+					"a[href=\"\\/\\?ref_\\=footer_logo\"]"
+				]
+			}
+		],
+		"impact": "serious",
+		"description": "Ensures links have discernible text",
+		"helpUrl": "https://dequeuniversity.com/rules/axe/4.2/link-name?application=axeAPI",
+		"id": "link-name",
+		"tags": [
+			"cat.name-role-value",
+			"wcag2a",
+			"wcag412",
+			"wcag244",
+			"section508",
+			"section508.22.a",
+			"ACT"
+		]
+	},
+	{
+		"help": "Page should contain a level-one heading",
+		"nodes": [
+			{
+				"all": [
+					{
+						"impact": "moderate",
+						"relatedNodes": [
+						],
+						"id": "page-has-heading-one",
+						"message": "Page must have a level-one heading"
+					}
+				],
+				"failureSummary": "Fix all of the following:\n  Page must have a level-one heading",
+				"impact": "moderate",
+				"html": "<html lang=\"en-us\" class=\" a-js a-audio a-video a-canvas a-svg a-drag-drop a-geolocation a-history a-webworker a-autofocus a-input-placeholder a-textarea-placeholder a-local-storage a-gradients a-transform3d a-touch-scrolling a-text-shadow a-text-stroke a-box-shadow a-border-radius a-border-image a-opacity a-transform a-transition null\" data-19ax5a9jf=\"dingo\" data-aui-build-date=\"3.21.4-2021-05-27\" data-useragent=\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\" data-platform=\"Win32\">",
+				"none": [
+				],
+				"any": [
+				],
+				"target": [
+					"html"
+				]
+			}
+		],
+		"impact": "moderate",
+		"description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+		"helpUrl": "https://dequeuniversity.com/rules/axe/4.2/page-has-heading-one?application=axeAPI",
+		"id": "page-has-heading-one",
+		"tags": [
+			"cat.semantics",
+			"best-practice"
+		]
+	},
+	{
+		"help": "All page content should be contained by landmarks",
+		"nodes": [
+			{
+				"all": [
+				],
+				"failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+				"impact": "moderate",
+				"html": "<a id=\"skiplink\" tabindex=\"0\" class=\"skip-link\">Skip to main content<\/a>",
+				"none": [
+				],
+				"any": [
+					{
+						"impact": "moderate",
+						"relatedNodes": [
+						],
+						"id": "region",
+						"message": "Some page content is not contained by landmarks"
+					}
+				],
+				"target": [
+					"#skiplink"
+				]
+			},
+			{
+				"all": [
+				],
+				"failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+				"impact": "moderate",
+				"html": "<a href=\"#nav-top\" id=\"navBackToTop\" aria-label=\"Back to top\">\n  <div class=\"navFooterBackToTop\">\n  <span class=\"navFooterBackToTopText\">\n    Back to top\n  <\/span>\n  <\/div>\n<\/a>",
+				"none": [
+				],
+				"any": [
+					{
+						"impact": "moderate",
+						"relatedNodes": [
+						],
+						"id": "region",
+						"message": "Some page content is not contained by landmarks"
+					}
+				],
+				"target": [
+					"#navBackToTop"
+				]
+			},
+			{
+				"all": [
+				],
+				"failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+				"impact": "moderate",
+				"html": "<div class=\"navFooterVerticalColumn navAccessibility\" role=\"presentation\">",
+				"none": [
+				],
+				"any": [
+					{
+						"impact": "moderate",
+						"relatedNodes": [
+						],
+						"id": "region",
+						"message": "Some page content is not contained by landmarks"
+					}
+				],
+				"target": [
+					".navFooterVerticalColumn"
+				]
+			},
+			{
+				"all": [
+				],
+				"failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+				"impact": "moderate",
+				"html": "<span class=\"icp-color-base\">English<\/span>",
+				"none": [
+				],
+				"any": [
+					{
+						"impact": "moderate",
+						"relatedNodes": [
+						],
+						"id": "region",
+						"message": "Some page content is not contained by landmarks"
+					}
+				],
+				"target": [
+					"#icp-touch-link-language > .icp-color-base"
+				]
+			},
+			{
+				"all": [
+				],
+				"failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+				"impact": "moderate",
+				"html": "<a href=\"/gp/customer-preferences/select-currency?ie=UTF8&amp;ref_=footer_cop&amp;preferencesReturnUrl=%2F\" class=\"icp-button\" id=\"icp-touch-link-cop\">\n  <span class=\"icp-currency-symbol\">$<\/span><span class=\"icp-color-base\">USD - U.S. Dollar<\/span>\n<\/a>",
+				"none": [
+				],
+				"any": [
+					{
+						"impact": "moderate",
+						"relatedNodes": [
+						],
+						"id": "region",
+						"message": "Some page content is not contained by landmarks"
+					}
+				],
+				"target": [
+					"#icp-touch-link-cop"
+				]
+			},
+			{
+				"all": [
+				],
+				"failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+				"impact": "moderate",
+				"html": "<span class=\"icp-color-base\">United States<\/span>",
+				"none": [
+				],
+				"any": [
+					{
+						"impact": "moderate",
+						"relatedNodes": [
+						],
+						"id": "region",
+						"message": "Some page content is not contained by landmarks"
+					}
+				],
+				"target": [
+					"#icp-touch-link-country > .icp-color-base"
+				]
+			},
+			{
+				"all": [
+				],
+				"failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+				"impact": "moderate",
+				"html": "<div class=\"navFooterLine navFooterLinkLine navFooterPadItemLine navFooterCopyright\">",
+				"none": [
+				],
+				"any": [
+					{
+						"impact": "moderate",
+						"relatedNodes": [
+						],
+						"id": "region",
+						"message": "Some page content is not contained by landmarks"
+					}
+				],
+				"target": [
+					".navFooterCopyright"
+				]
+			}
+		],
+		"impact": "moderate",
+		"description": "Ensures all page content is contained by landmarks",
+		"helpUrl": "https://dequeuniversity.com/rules/axe/4.2/region?application=axeAPI",
+		"id": "region",
+		"tags": [
+			"cat.keyboard",
+			"best-practice"
+		]
+	}
+]
