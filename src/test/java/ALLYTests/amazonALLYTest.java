@@ -37,6 +37,7 @@ public class amazonALLYTest {
 		if(violations.length()==0)
 		{
 			System.out.println("no errors");
+			System.out.println("Site looks good.");
 		}
 		else
 		{
